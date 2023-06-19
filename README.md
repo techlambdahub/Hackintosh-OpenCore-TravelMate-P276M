@@ -22,7 +22,7 @@ Pour comprendre le fonctionnement d'un hackintosh et plus précisément du dossi
 
 J'ai modifié le SMBIOS du config.plist comparé à celui du screenshot pour en mettre un compatible avec Ventura.
 Cepedant, les CPU/iGPU Haswell ne sont plus compatibles avec cette version.
-Vous devrez donc désactiver le SIP (remplacer 00000000 en 03080000) et patcher macOS avec [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher).
+Vous devrez donc désactiver le SIP (remplacer "csr-active-config" 00000000 par 03080000) et patcher macOS avec [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher).
 
 ## Ce qui fonctionne
 
