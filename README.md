@@ -37,3 +37,4 @@ Vous devrez donc désactiver le SIP (remplacer `NVRAM -> csr-active-config` 0000
 ## Ce qui ne fonctionne pas
 
 - Wi-Fi et bluetooth (la carte Qualcomm Atheros ne fonctionne pas, remplacé sur mon PC par une [Intel AC7260](https://www.amazon.fr/gp/product/B07R8J3ZK5))
+- Sortie de veille (lorsque le capot est rabattu puis relevé, l'écran reste noir)
