@@ -22,8 +22,8 @@ Pour comprendre le fonctionnement d'un hackintosh et plus précisément du dossi
 
 Les CPU/iGPU Haswell ne sont plus compatibles avec macOS Ventura.
 Vous devrez donc :
-- Désactiver le SIP (remplacer `NVRAM -> csr-active-config` `00000000` par `03080000`)
-- Ajouter l'argument de démarrage (`NVRAM -> boot-args` `amfi_get_out_of_my_way=0x1`)
+- Désactiver le SIP (remplacer `00000000` par `03080000` dans `NVRAM -> csr-active-config`)
+- Ajouter l'argument de démarrage `amfi_get_out_of_my_way=0x1` dans `NVRAM -> boot-args`
 - Patcher macOS avec [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher)
 
 ## ✅ Ce qui fonctionne
