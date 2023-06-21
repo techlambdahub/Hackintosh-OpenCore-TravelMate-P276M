@@ -8,7 +8,7 @@ Hackintosh du Acer TravelMate P276M
 | Specifications | Details                                                  |
 | ------------------- | ------------------------------------------- |
 | Version OpenCore     | 0.9.3      					|
-| Version macOS           | Monterey 12.6.6    		    |
+| Version macOS           | Ventura 13    		    |
 | Version SMBIOS           | MacBookPro14,1    		    |
 | CPU | Intel i5-4210U               |
 | iGPU          | Intel HD Graphics 4400            |
@@ -21,7 +21,10 @@ Pour comprendre le fonctionnement d'un hackintosh et plus précisément du dossi
 ## 🌼 Mise à niveau vers Ventura
 
 Les CPU/iGPU Haswell ne sont plus compatibles avec macOS Ventura.
-Vous devrez donc désactiver le SIP (remplacer `NVRAM -> csr-active-config` 00000000 par 03080000) et patcher macOS avec [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher).
+Vous devrez donc :
+- Désactiver le SIP (remplacer `NVRAM -> csr-active-config` `00000000` par `03080000`)
+- Ajouter l'argument de démarrage (`NVRAM -> boot-args` `amfi_get_out_of_my_way=0x1`)
+- Patcher macOS avec [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher)
 
 ## ✅ Ce qui fonctionne
 
