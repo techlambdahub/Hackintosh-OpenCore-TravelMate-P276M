@@ -8,8 +8,6 @@ Hackintosh du Acer TravelMate P276M
 | Specifications | Details                                                  |
 | ------------------- | ------------------------------------------- |
 | Version OpenCore     | 0.9.3      					|
-| Version macOS           | Ventura 13    		    |
-| Version SMBIOS           | MacBookPro14,1    		    |
 | CPU | Intel i5-4210U               |
 | iGPU          | Intel HD Graphics 4400            |
 | Audio          | Realtek ALC283 (ALCID=88)            |
@@ -18,13 +16,17 @@ Hackintosh du Acer TravelMate P276M
 
 Pour comprendre le fonctionnement d'un hackintosh et plus précisément du dossier "EFI", je vous invite à regarder [ma vidéo](https://youtu.be/Gaffvrc63jk) traitant du sujet.
 
-## 🌼 Mise à niveau vers Ventura
+## 📂 Variants
 
-Les CPU/iGPU Haswell ne sont plus compatibles avec macOS Ventura.
-Vous devrez donc :
-- Désactiver le SIP (remplacer `00000000` par `03080000` dans `NVRAM -> csr-active-config`)
-- Ajouter l'argument de démarrage `amfi_get_out_of_my_way=0x1` dans `NVRAM -> boot-args`
-- Patcher macOS avec [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher)
+Cette archive contient deux dossiers EFI :
+| Specifications | Monterey and older                                                  | Ventura and newer                                                  |
+| ------------------- | ------------------------------------------- | ------------------------------------------- |
+| Version max     | Monterey 12      					| Current (Sonoma 14)      					|
+| SMBIOS | MacBookPro12,1               | MacBookPro15,2               |
+| SIP          | Enabled `00000000`            | Semi-enabled `03080000`            |
+| Boot-args          | -            | `amfi_get_out_of_my_way=0x1`            |
+
+Le dossier `Monterey and older` ne nécessite pas d'[OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) comparé au second.
 
 ## ✅ Ce qui fonctionne
 
