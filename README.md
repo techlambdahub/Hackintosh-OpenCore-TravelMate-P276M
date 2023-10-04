@@ -26,7 +26,8 @@ Cette archive contient deux dossiers EFI :
 | SIP          | Enabled `00000000`            | Semi-enabled `03080000`            |
 | Boot-args          | -            | `amfi_get_out_of_my_way=0x1`            |
 
-Le dossier `Monterey and older` ne nécessite pas d'[OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) comparé au second.
+Ventura a abandonné la prise en charge de l'iGPU Intel 4440 utilisé ici et nécessite donc [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) pour fonctionner.
+Le dossier `Monterey and older` ne nécessite pas de patch, la mise à niveau vers Ventura ne sera pas proposée.
 
 ## ✅ Ce qui fonctionne
 
